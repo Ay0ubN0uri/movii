@@ -1,0 +1,77 @@
+application {
+  config {
+    baseName movii
+    applicationType gateway
+    packageName com.movii
+    authenticationType jwt
+    prodDatabaseType mysql
+    clientFramework react
+  }
+  entities *
+}
+
+application {
+  config {
+    baseName movie
+    applicationType microservice
+    packageName com.movii
+    authenticationType jwt
+    devDatabaseType mysql
+    prodDatabaseType mysql
+  }
+  entities Movie, Genre, Actor, Comment, UserMovies
+}
+
+
+entity Movie {
+  title String required
+    description TextBlob required
+    tmbdId String
+    thumbnail ImageBlob required
+    banner ImageBlob
+    releaseDate Instant required
+    videoUrl String
+    duration String
+    youtubeTrailer String
+    views Long
+    director String
+    averageRating Double
+}
+entity Genre {
+  name String required
+    description String
+    icon ImageBlob
+}
+entity Actor {
+  firstName String
+    lastName String
+    birthDate Instant
+    bio TextBlob
+    nationality String
+}
+entity Comment {
+  content TextBlob
+  rating Integer
+  createdDate Instant
+  userId Long
+}
+entity UserMovies {
+  userId Long
+}
+relationship OneToMany {
+  Genre{movie(title)} to Movie{genre(name)}
+}
+relationship ManyToOne {
+  Comment{movie(title)} to Movie
+  UserMovies{movie(title)} to Movie
+// Comment{user(login)} to User with builtInEntity
+}
+relationship ManyToMany {
+  // Movie{usersFavorites} to User{favoriteMovies} with builtInEntity
+//     Movie{userswatchlists} to User{watchlistMovies} with builtInEntity
+  Actor{movies(title)} to Movie{actors(firstName)}
+}
+microservice Movie, Genre, Actor, Comment,UserMovies with movie
+service * with serviceClass
+dto all with mapstruct
+paginate Movie, Genre, Actor, Comment with infinite-scroll

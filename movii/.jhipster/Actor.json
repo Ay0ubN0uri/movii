@@ -1,0 +1,48 @@
+{
+  "annotations": {
+    "changelogDate": "20231216144228"
+  },
+  "applications": ["movii", "movie"],
+  "clientRootFolder": "movie",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "actor",
+  "fields": [
+    {
+      "fieldName": "firstName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "birthDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "bio",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    },
+    {
+      "fieldName": "nationality",
+      "fieldType": "String"
+    }
+  ],
+  "microserviceName": "movie",
+  "name": "Actor",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityField": "title",
+      "otherEntityName": "movie",
+      "otherEntityRelationshipName": "actors",
+      "relationshipName": "movies",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

@@ -1,0 +1,29 @@
+{
+  "annotations": {
+    "changelogDate": "20231216144428"
+  },
+  "applications": ["movii", "movie"],
+  "clientRootFolder": "movie",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "user_movies",
+  "fields": [
+    {
+      "fieldName": "userId",
+      "fieldType": "Long"
+    }
+  ],
+  "microserviceName": "movie",
+  "name": "UserMovies",
+  "relationships": [
+    {
+      "otherEntityField": "title",
+      "otherEntityName": "movie",
+      "relationshipName": "movie",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

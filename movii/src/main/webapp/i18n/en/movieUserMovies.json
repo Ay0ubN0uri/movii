@@ -1,0 +1,29 @@
+{
+  "moviiApp": {
+    "movieUserMovies": {
+      "home": {
+        "title": "User Movies",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new User Movies",
+        "createOrEditLabel": "Create or edit a User Movies",
+        "notFound": "No User Movies found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete User Movies {{ id }}?"
+      },
+      "detail": {
+        "title": "User Movies"
+      },
+      "id": "ID",
+      "userId": "User Id",
+      "movie": "Movie"
+    }
+  },
+  "movieApp": {
+    "movieUserMovies": {
+      "created": "A new User Movies is created with identifier {{ param }}",
+      "updated": "A User Movies is updated with identifier {{ param }}",
+      "deleted": "A User Movies is deleted with identifier {{ param }}"
+    }
+  }
+}

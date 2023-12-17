@@ -1,0 +1,11 @@
+id;content;rating;created_date;user_id
+1;../fake-data/blob/hipster.txt;2182;2023-12-16T00:02:17;21281
+2;../fake-data/blob/hipster.txt;32703;2023-12-16T01:01:00;760
+3;../fake-data/blob/hipster.txt;20019;2023-12-16T05:03:30;18972
+4;../fake-data/blob/hipster.txt;9924;2023-12-16T09:21:12;18801
+5;../fake-data/blob/hipster.txt;6915;2023-12-15T19:09:58;31319
+6;../fake-data/blob/hipster.txt;26108;2023-12-15T17:12:01;15165
+7;../fake-data/blob/hipster.txt;6436;2023-12-15T23:07:35;18568
+8;../fake-data/blob/hipster.txt;7753;2023-12-16T05:47:32;20913
+9;../fake-data/blob/hipster.txt;19356;2023-12-16T08:23:03;5871
+10;../fake-data/blob/hipster.txt;2667;2023-12-16T10:18:48;17453

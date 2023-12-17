@@ -1,0 +1,21 @@
+{
+  "generator-jhipster": {
+    "applicationIndex": 1,
+    "applicationType": "microservice",
+    "authenticationType": "jwt",
+    "baseName": "movie",
+    "devDatabaseType": "mysql",
+    "entities": ["Movie", "Genre", "Actor", "Comment", "UserMovies"],
+    "jhipsterVersion": "8.1.0",
+    "jwtSecretKey": "ZmYyZDMzYmRmMDljOTQzODM2OWI5MTNiZmE5NGY0YmNjY2IyOTAwYmIwNGFiZWQyMWNiN2NiYzliMGMzZmZiZWMzZGI5OTIzYzdkOTI3ZjlmMzkwZTZmMGU2NDAwMDNiZjQ2YjJjZTFkNjM2ZmJkYmIwMWUzNjYwZGU5YTE0MzM=",
+    "languages": ["en"],
+    "lastLiquibaseTimestamp": 1702737868000,
+    "nativeLanguage": "en",
+    "packageFolder": "com/movii",
+    "packageName": "com.movii",
+    "prodDatabaseType": "mysql",
+    "serverPort": 8081,
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}

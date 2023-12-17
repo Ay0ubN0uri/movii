@@ -1,0 +1,30 @@
+{
+  "workspaces": {
+    "packages": [
+      "movii",
+      "movie"
+    ]
+  },
+  "scripts": {
+    "backend:build-cache": "concurrently npm:backend:build-cache:movii npm:backend:build-cache:movie",
+    "backend:build-cache:movie": "npm run backend:build-cache --workspace movie --if-present",
+    "backend:build-cache:movii": "npm run backend:build-cache --workspace movii --if-present",
+    "ci:backend:test": "npm run ci:backend:test --workspaces --if-present",
+    "ci:e2e:package": "npm run ci:docker:build --workspaces --if-present && npm run java:docker --workspaces --if-present",
+    "ci:e2e:run": "npm run e2e:headless --workspaces --if-present",
+    "ci:frontend:test": "npm run ci:frontend:test --workspaces --if-present",
+    "java:docker": "concurrently npm:java:docker:movii npm:java:docker:movie",
+    "java:docker:arm64": "concurrently npm:java:docker:arm64:movii npm:java:docker:arm64:movie",
+    "java:docker:arm64:movie": "npm run java:docker:arm64 --workspace movie --if-present",
+    "java:docker:arm64:movii": "npm run java:docker:arm64 --workspace movii --if-present",
+    "java:docker:movie": "npm run java:docker --workspace movie --if-present",
+    "java:docker:movii": "npm run java:docker --workspace movii --if-present",
+    "watch": "concurrently npm:watch:movii npm:watch:movie",
+    "watch:movie": "npm run watch --workspace movie --if-present",
+    "watch:movii": "npm run watch --workspace movii --if-present",
+    "webapp:test": "npm run webapp:test --workspaces --if-present"
+  },
+  "devDependencies": {
+    "concurrently": "8.2.2"
+  }
+}

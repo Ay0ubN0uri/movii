@@ -1,0 +1,25 @@
+{
+  "generator-jhipster": {
+    "applicationIndex": 0,
+    "applicationType": "gateway",
+    "applications": {
+      "movie": {
+        "applicationIndex": 1
+      }
+    },
+    "authenticationType": "jwt",
+    "baseName": "movii",
+    "clientFramework": "react",
+    "devServerPort": 9060,
+    "entities": ["Movie", "Genre", "Actor", "Comment", "UserMovies"],
+    "jhipsterVersion": "8.1.0",
+    "jwtSecretKey": "YjUzMTZmYTFlOGQxMTA3MDVhMmE1NzIyNzQ4ZTFjMmY1NjkxNWU0Mzk3M2RhOWMxNjk2MmQwZDk2NDNjODkzYzE2MzAxODYxYzEzMWY1ZjBlYTQzYjk3OGM5Yjg1MWMwODA3ZGZkMDU2Mjg5NDViMzY2MmE3NWZjZjVhZWY2ZTg=",
+    "languages": ["en"],
+    "lastLiquibaseTimestamp": 1702737868000,
+    "nativeLanguage": "en",
+    "packageFolder": "com/movii",
+    "packageName": "com.movii",
+    "prodDatabaseType": "mysql",
+    "reactive": true
+  }
+}

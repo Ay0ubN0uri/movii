@@ -1,0 +1,31 @@
+{
+  "moviiApp": {
+    "movieGenre": {
+      "home": {
+        "title": "Genres",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Genre",
+        "createOrEditLabel": "Create or edit a Genre",
+        "notFound": "No Genres found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Genre {{ id }}?"
+      },
+      "detail": {
+        "title": "Genre"
+      },
+      "id": "ID",
+      "name": "Name",
+      "description": "Description",
+      "icon": "Icon",
+      "movie": "Movie"
+    }
+  },
+  "movieApp": {
+    "movieGenre": {
+      "created": "A new Genre is created with identifier {{ param }}",
+      "updated": "A Genre is updated with identifier {{ param }}",
+      "deleted": "A Genre is deleted with identifier {{ param }}"
+    }
+  }
+}

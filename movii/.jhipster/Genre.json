@@ -1,0 +1,41 @@
+{
+  "annotations": {
+    "changelogDate": "20231216144128"
+  },
+  "applications": ["movii", "movie"],
+  "clientRootFolder": "movie",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "genre",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "icon",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    }
+  ],
+  "microserviceName": "movie",
+  "name": "Genre",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityField": "title",
+      "otherEntityName": "movie",
+      "otherEntityRelationshipName": "genre",
+      "relationshipName": "movie",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

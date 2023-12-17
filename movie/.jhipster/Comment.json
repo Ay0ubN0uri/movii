@@ -1,0 +1,43 @@
+{
+  "annotations": {
+    "changelogDate": "20231216144328"
+  },
+  "applications": ["movii", "movie"],
+  "clientRootFolder": "movie",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "comment",
+  "fields": [
+    {
+      "fieldName": "content",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    },
+    {
+      "fieldName": "rating",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "userId",
+      "fieldType": "Long"
+    }
+  ],
+  "microserviceName": "movie",
+  "name": "Comment",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityField": "title",
+      "otherEntityName": "movie",
+      "relationshipName": "movie",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

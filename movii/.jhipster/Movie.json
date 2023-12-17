@@ -1,0 +1,90 @@
+{
+  "annotations": {
+    "changelogDate": "20231216144028"
+  },
+  "applications": ["movii", "movie"],
+  "clientRootFolder": "movie",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "movie",
+  "fields": [
+    {
+      "fieldName": "title",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "tmbdId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "thumbnail",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "banner",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    },
+    {
+      "fieldName": "releaseDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "videoUrl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "duration",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "youtubeTrailer",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "views",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "director",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "averageRating",
+      "fieldType": "Double"
+    }
+  ],
+  "microserviceName": "movie",
+  "name": "Movie",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "genre",
+      "otherEntityRelationshipName": "movie",
+      "relationshipName": "genre",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "firstName",
+      "otherEntityName": "actor",
+      "otherEntityRelationshipName": "movies",
+      "relationshipName": "actors",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

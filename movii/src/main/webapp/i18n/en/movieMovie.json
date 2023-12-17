@@ -1,0 +1,41 @@
+{
+  "moviiApp": {
+    "movieMovie": {
+      "home": {
+        "title": "Movies",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Movie",
+        "createOrEditLabel": "Create or edit a Movie",
+        "notFound": "No Movies found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Movie {{ id }}?"
+      },
+      "detail": {
+        "title": "Movie"
+      },
+      "id": "ID",
+      "title": "Title",
+      "description": "Description",
+      "tmbdId": "Tmbd Id",
+      "thumbnail": "Thumbnail",
+      "banner": "Banner",
+      "releaseDate": "Release Date",
+      "videoUrl": "Video Url",
+      "duration": "Duration",
+      "youtubeTrailer": "Youtube Trailer",
+      "views": "Views",
+      "director": "Director",
+      "averageRating": "Average Rating",
+      "genre": "Genre",
+      "actors": "Actors"
+    }
+  },
+  "movieApp": {
+    "movieMovie": {
+      "created": "A new Movie is created with identifier {{ param }}",
+      "updated": "A Movie is updated with identifier {{ param }}",
+      "deleted": "A Movie is deleted with identifier {{ param }}"
+    }
+  }
+}
