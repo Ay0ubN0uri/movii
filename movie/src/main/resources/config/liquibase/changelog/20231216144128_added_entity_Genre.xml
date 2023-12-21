@@ -9,7 +9,7 @@
     -->
     <changeSet id="20231216144128-1" author="jhipster">
         <createTable tableName="genre">
-            <column name="id" type="bigint" autoIncrement="true" startWith="1500">
+            <column name="id" type="bigint" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
             <column name="name" type="varchar(255)">

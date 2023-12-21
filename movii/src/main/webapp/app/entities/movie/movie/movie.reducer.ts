@@ -4,6 +4,7 @@ import { loadMoreDataWhenScrolled, parseHeaderForLinks } from 'react-jhipster';
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
 import { IMovie, defaultValue } from 'app/shared/model/movie/movie.model';
+import {IGenre} from "app/shared/model/movie/genre.model";
 
 const initialState: EntityState<IMovie> = {
   loading: false,
@@ -67,6 +68,23 @@ export const deleteEntity = createAsyncThunk(
   { serializeError: serializeAxiosError },
 );
 
+export const isGenreExist = createAsyncThunk(
+  'movie/fetch_entity_byName',
+  async (name: string) => {
+    try {
+      const requestUrl = `services/movie/api/genres/name/${name}`;
+      const response = await axios.get<IGenre>(requestUrl);
+      console.log("res: ", response);
+      return { success: true, data: response.data, generId: response.data.id, error : null };
+    } catch (error) {
+      return { success: false, data: null, generId: null, error: error.message };
+    }
+  },
+  { serializeError: serializeAxiosError },
+);
+
+
+
 // slice
 
 export const MovieSlice = createEntitySlice({
@@ -82,6 +100,9 @@ export const MovieSlice = createEntitySlice({
         state.updating = false;
         state.updateSuccess = true;
         state.entity = {};
+      })
+      .addCase(isGenreExist.fulfilled, (state, action) => {
+        const genreExists = action.payload;
       })
       .addMatcher(isFulfilled(getEntities), (state, action) => {
         const { data, headers } = action.payload;

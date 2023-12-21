@@ -164,6 +164,15 @@ public class GenreResource {
         return ResponseUtil.wrapOrNotFound(genreDTO);
     }
 
+
+    @GetMapping("/name/{name}")
+    public ResponseEntity<GenreDTO> getGenreByName(@PathVariable("name") String name) {
+        log.debug("REST request to get Genre : {}", name);
+        Optional<GenreDTO> genreDTO = genreService.findByName(name);
+        return ResponseUtil.wrapOrNotFound(genreDTO);
+    }
+
+
     /**
      * {@code DELETE  /genres/:id} : delete the "id" genre.
      *

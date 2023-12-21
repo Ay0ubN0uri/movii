@@ -100,6 +100,12 @@ public class GenreService {
         return genreRepository.findById(id).map(genreMapper::toDto);
     }
 
+    @Transactional(readOnly = true)
+    public Optional<GenreDTO> findByName(String name) {
+        log.debug("Request to get Genre : {}", name);
+        return genreRepository.findByName(name).map(genreMapper::toDto);
+    }
+
     /**
      * Delete the genre by id.
      *
