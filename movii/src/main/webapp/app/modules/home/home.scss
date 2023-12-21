@@ -5,6 +5,31 @@ Main page styles
   display: inline-block;
   width: 100%;
   height: 497px;
-  background: url('/content/images/jhipster_family_member_0.svg') no-repeat center top;
+  background: url('/content/images/movii-icon.png') no-repeat center top;
   background-size: contain;
+}
+
+/* Home.css */
+
+.custom-card {
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  h5 {
+    color: #343a40;
+    font-size: 1.5rem;
+  }
+
+  p {
+    color: #6c757d;
+  }
+
 }
